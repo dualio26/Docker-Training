@@ -1,5 +1,5 @@
 # FijiDocumentation
-Documentation on projects happening in fiji
+This will og over the instructions and examples for the Docker Course.
 
 
-## This is a second heading
+## Day 1
