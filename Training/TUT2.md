@@ -100,7 +100,7 @@ Once the Liferay platform has been hosted on Docker, the FIMS can be installed/r
 4. Select the Applications Menu button <img src="../Images/Picture2.png" style="vertical-align:middle"> and select Global. 
 The page will automatically be redirected to the ‘Fragments’ page. Click again on the applications menu button to confirm that the tag ‘Current’ appears next to Global. <img src="../Images/Picture3.png" style="vertical-align:middle"> Click X to return.  
 
-5. Select the control panel button <img src="../Images/Picture10.png" style="vertical-align:middle"> this will open the control panel navigation bar and select Publishing > Import.<img src="../Images/Picture11.png" style="vertical-align:middle; width:45%">
+5. Select the control panel button <img src="../Images/Picture10.png" style="vertical-align:middle"> this will open the control panel navigation bar and select Publishing > Import.<br><br><img src="../Images/Picture11.png" style="vertical-align:middle; width:45%">
 
 6. Select <button name="button" style="background-color:#2697ed; border:none; font-size: large; color: white; padding:0.1% 1%; border-radius: 5px; vertical-align:middle;">+</button> and drag and drop the *Global_No_Pages* file from the ***backup*** Folder into the dashed box. Wait for this to load and then select ‘Continue’. 
 
