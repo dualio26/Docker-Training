@@ -1,4 +1,4 @@
-### <br> Step 3: Configuration and Installation of FIMS
+### <br> Step 3: Configuration and Installation of FIMS (1)
 
 Once the Liferay platform has been hosted on Docker, the FIMS can be installed/restored. This requires the following four files:
 

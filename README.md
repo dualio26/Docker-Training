@@ -37,5 +37,7 @@ The FIMS is operated on a software platform called Liferay. The next step is to 
 3. In command prompt, start the application by running `docker-compose up -d`
 4. Goto http://localhost:8080/ in a browser to see the application running. At this stage this will show the Liferay platform home screen. Part 3 will explain how to install/restore the Forest Information Management System onto the Liferay platform.
 
+### <br> Step 3: Configuration and Installation of FIMS
+
 [**Configuration and Installation of FIMS**](FIM.md)
 
