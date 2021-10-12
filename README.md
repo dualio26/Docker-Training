@@ -54,4 +54,4 @@ The FIMS is operated on a software platform called Liferay. The next step is to 
 
 1. Return to the docker interface and select the ‘Stop’ Button, or in the command prompt Ctrl + C or `docker-compose stop` command. 
 
-<img src="Picture9.png" style="vertical-align:middle">
+<img src="Images/Picture9.png" style="vertical-align:middle">

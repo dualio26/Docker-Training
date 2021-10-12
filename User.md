@@ -5,15 +5,15 @@ Three new users need to be added to allow the full operation and administration 
 - Fims Admin
 - Fims Super
 
-1. Before adding the new users, first disable email verification. Go to the Application Menu <img src="Picture2.png" style="vertical-align:middle"> Control Panel / Instance Settings /User Authentication/General and deselect the ‘Require strangers to verify their email address?’ Check box. 
+1. Before adding the new users, first disable email verification. Go to the Application Menu <img src="Images/Picture2.png" style="vertical-align:middle"> Control Panel / Instance Settings /User Authentication/General and deselect the ‘Require strangers to verify their email address?’ Check box. 
 2. Click ‘Save’ to save the new settings
 
-<img src="Picture8.png" style="vertical-align:middle;">
+<img src="Images/Picture8.png" style="vertical-align:middle;">
 
 ### <br> Part 4: Adding New Users (2)
 
 **FIMS User (General user)**
-1. Go to the Application Menu <img src="Picture2.png" style="vertical-align:middle"> then select ‘Users and Organizations’
+1. Go to the Application Menu <img src="Images/Picture2.png" style="vertical-align:middle"> then select ‘Users and Organizations’
 2. Click on the <button name="button" style="background-color:#2697ed; border:none; font-size: large; color: white; padding:0.1% 1%; border-radius: 5px; vertical-align:middle;">+</button> and enter the required fields. e.g fimsuser and fimsusers@enviroaccounts.com. Select ‘Save’. 
 3. On the ‘User and Organizations’ Page, select the option button <button name="button" style="background-color:white; border:none; font-size: large; color: Black; padding:0.1% 1%; border-radius: 5px; vertical-align:middle;">&vellip;</button> next to the user name and select ‘Edit’
 4. On the Membership Tab, under ‘Sites’ click ‘Select’ and click ‘Liferay’. 
