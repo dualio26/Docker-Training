@@ -56,7 +56,7 @@ The FIMS is operated on a software platform called Liferay. The next step is to 
 
 <img src="Images/Picture9.png" style="vertical-align:middle">
 
-<br><br><br>
+<br><br>
 
 ## Training 2
 [**Training 2**](Training/TUT2.md)
