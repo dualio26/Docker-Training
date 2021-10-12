@@ -41,3 +41,6 @@ The FIMS is operated on a software platform called Liferay. The next step is to 
 
 [**Configuration and Installation of FIMS**](FIM.md)
 
+
+### <br> Step 4: Adding New Users
+[**Adding New Users**](User.md)
