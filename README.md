@@ -44,3 +44,14 @@ The FIMS is operated on a software platform called Liferay. The next step is to 
 
 ### <br> Step 4: Adding New Users
 [**Adding New Users**](User.md)
+
+### <br> Step 5: Accessing FIMS
+**Access site from another computer on local LAN**
+
+1. Enter IP address of the host computer into browser followed by port 8080. e.g 192.168.x.xx:8080 and confirm FIMS loads. This confirms the site is being hosted on the local LAN. 
+
+### <br> Step 6: Ending Docker Session
+
+1. Return to the docker interface and select the ‘Stop’ Button, or in the command prompt Ctrl + C or `docker-compose stop` command. 
+
+<img src="Picture9.png" style="vertical-align:middle">
