@@ -4,9 +4,9 @@ This will repo go over the instructions and examples for the Docker Course.
 
 ## information
 
-This course goes over "3 days" focusing on buidling the users skill to be able to use docker for the current projects intended purpose.
+This course goes over "3 days" focusing on buidling the users skill to be able to use docker for the current projects intended purpose. <br><br>
 
-## Getting started
+## Training 1
 ### <br> Step 1: Installing Docker
 Installing Docker on a windows machine.
 <br><br>
@@ -55,3 +55,8 @@ The FIMS is operated on a software platform called Liferay. The next step is to 
 1. Return to the docker interface and select the ‘Stop’ Button, or in the command prompt Ctrl + C or <br>`docker-compose stop` command. 
 
 <img src="Images/Picture9.png" style="vertical-align:middle">
+
+<br><br><br>
+
+## Training 2
+[**Training 2**](Training/TUT2.md)
