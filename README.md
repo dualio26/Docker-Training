@@ -10,6 +10,7 @@ This course goes over "3 days" focusing on buidling the users skill to be able t
 ### <br> Step 1: Installing Docker
 Installing Docker on a windows machine.
 <br><br>
+
 1. Follow the link [here](https://docs.docker.com/docker-for-windows/install/ ) to go to the docker website and download it.
 2. Select Download from Docker hub and click on this button (this is a free download) <br><br><button name="button" onclick="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe" style="background-color:#2697ed; border:none; color: #ffffff; padding:1%; border-radius: 5px;">Docker Download for Windows</button><br><br>
 3. Once the download has been completed open the installer and follow the prompts to completed the installation of Docker. Once installed you will be required to restart your computer before running the Docker software. 
@@ -35,7 +36,7 @@ The FIMS is operated on a software platform called Liferay. The next step is to 
 1. Open Docker Desktop
 2. Open Command prompt and navigate to the directory (cd prompt) containing the saved files from step 1 (docker-compose, backup, volumes)
 3. In command prompt, start the application by running `docker-compose up -d`
-4. Goto http://localhost:8080/ in a browser to see the application running. At this stage this will show the Liferay platform home screen. Part 3 will explain how to install/restore the Forest Information Management System onto the Liferay platform.
+4. Goto [Local Host](http://localhost:8080/) in a browser to see the application running. At this stage this will show the Liferay platform home screen. Part 3 will explain how to install/restore the Forest Information Management System onto the Liferay platform.
 
 ### <br> Step 3: Configuration and Installation of FIMS
 
