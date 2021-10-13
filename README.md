@@ -61,3 +61,6 @@ The FIMS is operated on a software platform called Liferay. The next step is to 
 
 ## Training 2
 [**Training 2**](Training/TUT2.md)
+
+## Example 1
+[**Example 1**](Example1/README.md)
