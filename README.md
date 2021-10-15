@@ -10,6 +10,8 @@ This course goes over "3 days" focusing on buidling the users skill to be able t
 
 | Title | Link | Details |
 | --------------- | ---------- | ------- |
-| Training 1 |[**Training 1**](Training/TUT1.md)|This goes through setting yourself up to start working with docker on your system|
+|Training 1|[**Training 1**](Training/TUT1.md)|This goes through setting yourself up to start working with docker on your system|
 |Training 2|[**Training 2**](Training/TUT2.md)|This takes you through the next steps after setting up docker|
+|FIMs|[**FIM**](FIM/FIM.md)|Setting up the Liferay system|
+|FIMs Training 1|[**FIM Training 1**](FIM/FIMTUT1.md)|Utelizing the Liferay system|
 |Example 1|[**Example 1**](Example1/README.md)|Now that you have been exposed to docker these are more workable examples.|
