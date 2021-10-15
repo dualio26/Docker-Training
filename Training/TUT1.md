@@ -32,11 +32,11 @@ The FIMS is operated on a software platform called Liferay. The next step is to 
 
 ### <br> Step 3: Configuration and Installation of FIMS
 
-[**Configuration and Installation of FIMS**](FIM.md)
+[**Configuration and Installation of FIMS**](../FIM/FIM.md)
 
 
 ### <br> Step 4: Adding New Users
-[**Adding New Users**](User.md)
+[**Adding New Users**](../User.md)
 
 ### <br> Step 5: Accessing FIMS
 **Access site from another computer on local LAN**
