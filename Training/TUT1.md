@@ -1,50 +1,309 @@
 ## Training 1
-### <br> Step 1: Installing Docker
-Installing Docker on a windows machine.
+
+### Overview:
+
+- https://hub.docker.com/_/hello-world
+
+- This checks docker is correctly installed and operational 
+
+- Running use command prompt. Windows key + R, cmd opens the command prompt
+
+- Run in command line –>  `docker  run hello-world`
+
+<br>
+
+## Session info:
+
+- Download the example files in this directory of the Repo
+
+<br>
+
+### Docker; 1 - Run
+
+<br>
+<details>
+
+1. Neccesary Commands
+    - Pull
+    - Image
+    - Run
+
+<br>
+
+2. Process
+   1. Open command prompt
+   2. Change directory to directory where the zip file was extracted to (e.g docker-1-run) (cd)
+   3. Type -> notepad.exe command.txt to open the command text file 
+   4. Select first command line with mouse and copy 
+   5. Paste into command prompt 
+   6. Where a line starts with a # this is an instruction rather than a command e.g visit a browser and copy in the URL e.g localhost:5678
+
+<br>
+
+3. Output
+   1. Terminal Output<br><br><img src="../Images/Picture28.png">
+    <br><br>
+   2. Web Solution<br><br><img src="../Images/Picture31.png">
+</details>
+<br>
+
+### Docker; 2 - Run + PS + Kill
+
+<br>
+<details>
+
+1. Neccesary Commands
+    - Run
+      - Detach/interactive (-d/-it)
+      - Ports - Publish/Expose
+    - PS – lists instances that are running on the server
+    - Kill – removes running image
+
+<br><br>
+[//]: # Add Lucid Chart image here
 <br><br>
 
-1. Follow the link [here](https://docs.docker.com/docker-for-windows/install/ ) to go to the docker website and download it.
-2. Select Download from Docker hub and click on this button (this is a free download) <br><br><button name="button" onclick="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe" style="background-color:#2697ed; border:none; color: #ffffff; padding:1%; border-radius: 5px;">Docker Download for Windows</button><br><br>
-3. Once the download has been completed open the installer and follow the prompts to completed the installation of Docker. Once installed you will be required to restart your computer before running the Docker software. 
+1. Process
+   1. docker docker run -d -p 5678:5678 hashicorp/http-echo -text="hello world"<br><br><img src="../Images/Picture32.png">
+
+   2. docker docker run -d -p 8765:5678 hashicorp/http-echo -text="hello world"<br><br>docker ps<br><br><img src="../Images/Picture33.png">
+
+   3. docker docker run -d -p 8888:5678 hashicorp/http-echo -text="hello world"<br><br><img src="../Images/Picture31.png">
+</details>
+<br>
+
+### Docker; 3 - Run + PS + Kill
+
+<br>
+<details>
+
+1. Neccesary Commands
+    - Run
+      - Network
+
 <br><br>
-Note: To run docker on Windows 10 Home, you must:
-   - be operating as the machine administrator user profile
-   - Have WSL2 Linux Kernel installed and updated [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10)  
+[//]: # Add Lucid Chart image here
+<br><br>
 
-4. After the restart, open Docker Desktop. The Docker Whale Symbol should also appear in your bottom toolbar.
+1. Process
+   1. docker network create --driver=bridge --subnet=172.28.5.0/24 --ip-range=172.28.5.0/24 --gateway=172.28.5.254 mynet
+    <br><br><img src="../Images/Picture35.png"><br><br>
 
-### <br> Step 2: Hosting Liferay – Docker Compose
-The FIMS is operated on a software platform called Liferay. The next step is to host the Liferay platform through docker using Docker Compose 
+   2. docker run -d -p 5678:5678 --network=mynet --ip="172.28.5.2" hashicorp/http-echo -text="hello world A - Publish local port 5678“
+   3. docker run -d -p 8888:5678 --network=mynet --ip="172.28.5.3" hashicorp/http-echo -text="hello world B - Redirect to public 8888“
+   4. docker run -d --expose 5678 --network=mynet --ip="172.28.5.4" hashicorp/http-echo -text="hello world C - Exposed port 5678 only”<br><br>docker ps<br><br><img src="../Images/Picture36.png"><br><br>
 
-**Familiarization with Docker Compose and Hosting of Liferay**
+   5. Exposed port accessed through external IP address<br><br><img src="../Images/Picture34.png">
+</details>
+<br>
 
-1. Open Docker Desktop and command prompt
-2. Follow the instructions given on the following link to carry out an exercise to practice using [Docker Compose](https://docs.docker.com/compose/gettingstarted/#step-3-define-services-in-a-compose-file). 
+### Docker; 4 - Build
 
-**Download Files from Drop Box**
-1. Download the `docker-compose.yml` file, `Backup` and `Volumes` folder onto your local directory with the same directory structure as on the dropbox
+<br>
+<details>
 
-**Hosting Liferay**
-1. Open Docker Desktop
-2. Open Command prompt and navigate to the directory (cd prompt) containing the saved files from step 1 (docker-compose, backup, volumes)
-3. In command prompt, start the application by running `docker-compose up -d`
-4. Goto [Local Host](http://localhost:8080/) in a browser to see the application running. At this stage this will show the Liferay platform home screen. Part 3 will explain how to install/restore the Forest Information Management System onto the Liferay platform.
+1. Neccesary Commands
+    - Build
 
-### <br> Step 3: Configuration and Installation of FIMS
+<br><br>
+[//]: # Add Lucid Chart image here
+<br><br>
 
-[**Configuration and Installation of FIMS**](../FIM/FIM.md)
+1. Process
+   1. docker build -t php-hello-world
+   2. docker image
+   3. docker run -d -p 8888:80 php-hello-world
+   4. docker ps
+
+Use your desired browser and enter [`localhost:8888`](https://localhost:8888) into the search bar
+
+   5. docker run -d -p 5678:5678 --network=mynet --ip="172.28.5.2" hashicorp/http-echo -text="hello world A - Publish local port 5678“<br><br><br>docker run -d -p 8888:5678 --network=mynet --ip="172.28.5.3" hashicorp/http-echo -text="hello world B - Redirect to public 8888“<br><br><br>docker run -d --expose 5678 --network=mynet --ip="172.28.5.4" hashicorp/http-echo -text="hello world C - Exposed port 5678 only”<br><br>docker ps<br><br><img src="../Images/Picture36.png"><br><br>
+
+2. Output<br><br><img src="../Images/Picture37.png">
+</details>
+<br>
+
+### Compose; 1 - Compose + Up
+
+<br>
+<details>
+
+1. Neccesary Commands
+    - Up
+    - Down
+    - Start
+    - Stop
+
+<br><br>
+[//]: # Add Lucid Chart image here
+<br><br>
+
+1. Process
+   1. docker-compose up -d
+   2. docker ps<br><br><img src="../Images/Picture38.png" style="width:50%;"><br><br><img src="../Images/Picture39.png" style="width:50%;">
+   3. Browse [`localhost:8888`](https://localhost:8888)
+
+   4. Now up, start, stop, stop<br><br>docker-compose up -d<br><br>
+   5. docker ps
+   6. docker-compose start
+   7. docker ps
+   8. docker-compose down
+   9. docker ps <br><br><img src="../Images/Picture40.png" style="width:50%;">[//]: # Re do image
+
+</details>
+<br>
+
+### Compose; 2 - Compose + Build
+
+<br>
+<details>
+
+1. Neccesary Commands
+    - Up
+    - Down
+    - Start
+    - Stop
+    - Build
+
+<br><br>
+[//]: # Add Lucid Chart image here
+<br><br>
+
+1. Process
+   1. docker-compose build
+   2. docker-compose up -d
+   3. Browse [`localhost:8888`](https://localhost:8888) Notice there is no "down"<br><br><img src="../Images/Picture41.png" style="width:50%;">[//]: # Re do image<br><br><img src="../Images/Picture42.png" style="width:50%;"><br><br>
+   4. Change the content in bula-fiji/src/index.php to;
+   5. `3: echo "Hello, World from php in Docker!<br>";`
+   6. `3: echo "Bula Fiji from php in Docker!<br>";`
+   7. Browse [`localhost:8888`](https://localhost:8888)<br><br><img src="../Images/Picture43.png" style="width:50%;">
+
+</details>
+<br>
+
+### Compose; 3 - Compose + Network
+
+<br>
+<details>
+
+1. Neccesary Commands
+    - Up
+    - Down
+    - Start
+    - Stop
+
+<br><br>
+[//]: # Add Lucid Chart image here
+<br><br>
+
+1. Process
+   1. docker-compose up -d
+   2. docker ps
+   3. Browse (A) [`localhost:5678`](https://localhost:5678)<br><br>Browse (B) [`localhost:8888`](https://localhost:8888)<br><br><img src="../Images/Picture44.png" style="width:50%;"><br><br><img src="../Images/Picture45.png" style="width:50%;"><br><br>
+   4. Now open these ports in someone elses browser<br><br><img src="../Images/Picture46.png" style="width:50%;">
+
+</details>
+<br>
+
+### Compose; 4 - Compose + Volume
+
+<br>
+<details>
+
+1. Neccesary Commands
+    - Up
+    - Down
+    - Start
+    - Stop
+    - Build
+
+<br><br>
+[//]: # Add Lucid Chart image here
+<br><br>
+
+1. Process
+   1. docker-compose build
+   2. docker-compose up -d
+   3. [`localhost:8888`](https://localhost:8888)<br><br><img src="../Images/Picture47.png" style="width:50%;"><br><br><img src="../Images/Picture48.png" style="width:50%;"><br><br>
+   4. Change the content in volumes/bula-fiji-node/index.php to;
+   5. `3: echo "Hello, World from php in Docker!<br>";`<br><br>`3: echo "Bula Fiji from php in Docker!<br>";`<br><br>There is no need to rebuild
+   6. [`localhost:8888`](https://localhost:8888)<br><br><img src="../Images/Picture43.png" style="width:50%;">
+
+</details>
+<br>
 
 
-### <br> Step 4: Adding New Users
-[**Adding New Users**](../User.md)
+### Compose; 1 - Skeleton System
 
-### <br> Step 5: Accessing FIMS
-**Access site from another computer on local LAN**
+<br>
+<details>
 
-1. Enter IP address of the host computer into browser followed by port 8080. e.g 192.168.x.xx:8080 and confirm FIMS loads. This confirms the site is being hosted on the local LAN. 
+1. Neccesary Commands
+    - Run
+      - Network
 
-### <br> Step 6: Ending Docker Session
+<br><br>
+[//]: # Add Lucid Chart image here
+<br><br>
 
-1. Return to the docker interface and select the ‘Stop’ Button, or in the command prompt Ctrl + C or <br>`docker-compose stop` command. 
+1. Process
+   1. docker-compose build
+   2. docker-compose up -d
+   3. [`localhost:8888`](https://localhost:8888)<br><br><img src="../Images/Picture47.png" style="width:50%;"><br><br><img src="../Images/Picture48.png" style="width:50%;"><br><br>
+   4. Change the content in volumes/bula-fiji-node/index.php to;
+   5. `3: echo "Hello, World from php in Docker!<br>";`<br><br>`3: echo "Bula Fiji from php in Docker!<br>";`<br><br>There is no need to rebuild
+   6. [`localhost:8888`](https://localhost:8888)<br><br><img src="../Images/Picture43.png" style="width:50%;">
 
-<img src="../Images/Picture9.png" style="vertical-align:middle">
+</details>
+<br>
+
+### Terminology
+
+<br>
+<details>
+
+1. Proxy
+    - Rev Proxy
+    - Switch (Name/IP/Portal)
+    - SSL
+2. Images
+    - Postgresql
+    - Liferay
+    - Caddy
+    - Shiny Proxy
+    - Hello World
+    - Http Echo
+</details>
+<br>
+
+### Skeleton System
+
+<br>
+<details>
+
+[//]: # Add Lucid Chart image here
+
+1. Images
+    - Postgresql
+    - Liferay
+    - Shiny Proxy
+      - Rimages
+</details>
+<br>
+
+### Traffic Routing (inc Liferay)
+
+<br>
+<details>
+<br><br><img src="../Images/Picture29.png" style="width:50%;">
+[//]: # Add Lucid Chart image here
+</details>
+<br>
+
+### Traffic Routing (Full Complexity)
+
+<br>
+<details>
+[//]: # Add Lucid Chart image here
+</details>
+<br>
