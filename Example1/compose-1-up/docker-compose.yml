@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+  webapp:
+    image: hashicorp/http-echo:latest
+    command: ['-text', 'Hello world..']
+    ports:
+      - "8888:5678"

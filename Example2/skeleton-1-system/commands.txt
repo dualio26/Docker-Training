@@ -1,0 +1,27 @@
+
+
+docker-compose up -d
+
+docker ps
+
+# browser (A) localhost:5678
+# browser (B) localhost:8888
+# browser (bula-fiji) localhost:8222
+
+# Someone else's browser (A) <public ip>:5678
+# Someone else's browser (B) <public ip>:8888
+# Someone else's browser (bula-fiji) <public ip>:8222
+
+
+# change the volumes\bula-fiji-node\index.php to
+# 3: echo "Hello, World from php in Docker! <br>";
+# 3: echo "Bula Fiji from php in Docker! <br>";
+
+notepad.exe volumes\bula-fiji-node\src\index.php
+
+# There is no need to rebuild
+# browser localhost:8222
+
+
+docker-compose down
+

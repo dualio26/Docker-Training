@@ -1,0 +1,33 @@
+version: "3.3"
+services:
+  a-app:
+    image: hashicorp/http-echo:latest
+    command: ['-text', "hello world A - Publish local port 5678"]
+    ports:
+      - "5678:5678"
+    networks:
+      mynet:
+        ipv4_address: 172.28.5.2
+  b-app:
+    image: hashicorp/http-echo:latest
+    command: ['-text', "hello world B - Redirect to public 8888"]
+    ports:
+      - "8888:5678"
+    networks:
+      mynet:
+        ipv4_address: 172.28.5.3
+  c-app:
+    image: hashicorp/http-echo:latest
+    command: ['-text', "hello world C - Exposed port 5678 only"]
+    expose:
+      - 5678
+    networks:
+      mynet:
+        ipv4_address: 172.28.5.4
+networks:
+  mynet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.5.0/24

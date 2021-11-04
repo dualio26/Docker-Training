@@ -1,0 +1,54 @@
+
+
+docker-compose build
+docker-compose up -d
+
+docker ps
+
+# browser (A) localhost:5678
+# browser (B) localhost:8888
+# browser (bula-fiji) localhost:8222
+
+# browser localhost:8080
+# check that it identifies itself as (A)
+
+
+# change the volumes\proxy-node\caddy\Caddyfile
+# change line 25 from
+# 25:      reverse_proxy http://172.28.5.2:5678 {
+#      to
+# 25:      reverse_proxy http://172.28.5.3:8888 {
+
+notepad.exe volumes\proxy-node\caddy\Caddyfile
+
+
+# There is no need to rebuild
+# but the proxy server needs to be restarted to have the change take effect.
+
+docker-compose restart proxy-node
+
+# browser localhost:8080
+# check that it identifies itself as (B)
+
+
+# change the volumes\proxy-node\caddy\Caddyfile
+# change line 25 from
+# 25:      reverse_proxy http://172.28.5.3:8888 {
+#      to
+# 25:      reverse_proxy http://172.28.5.4:5678 {
+
+notepad.exe volumes\proxy-node\caddy\Caddyfile
+
+
+# There is no need to rebuild
+# but the proxy server needs to be restarted to have the change take effect.
+
+docker-compose restart proxy-node
+
+# browser localhost:8080
+# check that it identifies itself as (C)
+
+
+
+docker-compose down
+

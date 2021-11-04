@@ -1,0 +1,31 @@
+
+
+docker-compose build
+docker-compose up -d
+
+docker ps
+
+
+# These ports will not work anymore. The only way in is through 8080
+# browser (A) localhost:5678
+# browser (B) localhost:8888
+# browser (bula-fiji) localhost:8222
+
+
+# browser localhost:8080
+# check that it identifies itself as (A)
+
+# browser localhost:8080/node-a
+# check that it identifies itself as (A)
+
+# browser localhost:8080/node-b
+# check that it identifies itself as (B)
+
+# browser localhost:8080/node-c
+# check that it identifies itself as (C)
+
+# browser localhost:8080/node-d
+# check that it identifies itself as (bula-fiji)
+
+docker-compose down
+

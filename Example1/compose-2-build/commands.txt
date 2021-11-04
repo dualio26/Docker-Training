@@ -1,0 +1,24 @@
+
+
+docker-compose build
+docker-compose up -d
+
+# browser localhost:8888
+
+# Notice there is no "down"
+
+
+# change the bula-fiji\src\index.php to Bula
+# 3: echo "Hello, World from php in Docker! <br>";
+# 3: echo "Bula Fiji from php in Docker! <br>";
+
+notepad.exe bula-fiji\src\index.php
+
+docker-compose build
+
+docker-compose up -d
+
+ # browser localhost:8888
+
+docker-compose down
+

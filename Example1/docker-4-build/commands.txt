@@ -1,0 +1,21 @@
+
+
+
+
+docker build -t php-hello-world .
+
+
+docker images
+
+
+docker run -d -p 8888:80 php-hello-world
+
+
+docker ps
+
+
+# browser localhost:8888
+
+docker kill <container id>
+
+docker ps

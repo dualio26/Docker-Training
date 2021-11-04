@@ -1,0 +1,38 @@
+
+
+
+# up, down
+
+docker-compose up -d
+
+
+docker ps
+
+
+# browser localhost:8888
+
+docker-compose down
+
+docker ps
+
+
+
+# Now up, start, stop, down
+docker-compose up -d
+
+docker ps
+
+docker-compose stop
+docker ps
+
+# browser localhost:8888
+
+
+docker-compose start
+docker ps
+
+# browser localhost:8888
+
+docker-compose down
+
+docker ps

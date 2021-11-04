@@ -1,0 +1,32 @@
+
+
+docker run -d -p 5678:5678 hashicorp/http-echo -text="hello world"
+
+docker ps
+
+# browser localhost:5678
+
+docker kill <container id>
+
+
+
+
+docker run -d -p 8765:5678 hashicorp/http-echo -text="hello world"
+docker ps
+
+# browser localhost:8765
+
+docker kill <container id>
+
+
+
+docker run -d -p 8888:5678 hashicorp/http-echo -text="hello world"
+docker ps
+
+# browser localhost:8765
+# Someone else's browse <public ip>:5678
+
+docker kill <container id>
+
+
+

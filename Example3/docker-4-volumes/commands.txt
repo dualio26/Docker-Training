@@ -1,0 +1,31 @@
+
+
+docker-compose build
+docker-compose up -d
+
+# browser localhost:8888
+ 
+
+
+docker cp docker-4-volumes_webapp_1:/var/www/html .\
+
+# You now have a new directory called html 
+# open html\index.php in notepad
+
+notepad.exe html\index.php
+
+# and change text from:
+# 3: echo "Hello, World from php in Docker! <br>";
+# to:
+# 3: echo "Bula Fiji from php in Docker! <br>";
+
+
+
+docker cp .\html docker-4-volumes_webapp_1:/var/www/
+
+# There is no need to rebuild
+# browser localhost:8888
+
+
+docker-compose down
+

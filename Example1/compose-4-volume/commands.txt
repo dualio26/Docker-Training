@@ -1,0 +1,18 @@
+
+
+docker-compose build
+docker-compose up -d
+
+# browser localhost:8888
+
+# change the volumes\bula-fiji-node\index.php to
+# 3: echo "Hello, World from php in Docker! <br>";
+# 3: echo "Bula Fiji from php in Docker! <br>";
+
+notepad.exe volumes\bula-fiji-node\src\index.php
+
+# There is no need to rebuild
+# browser localhost:8888
+
+docker-compose down
+

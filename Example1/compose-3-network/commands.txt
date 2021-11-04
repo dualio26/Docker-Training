@@ -1,0 +1,16 @@
+
+
+docker-compose up -d
+
+docker ps
+
+# browser (A) localhost:5678
+# browser (B) localhost:8888
+
+
+# Someone else's browser (A) <public ip>:5678
+# Someone else's browser (B) <public ip>:8888
+
+
+docker-compose down
+

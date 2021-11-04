@@ -1,0 +1,27 @@
+
+
+docker-compose build
+docker-compose up -d
+
+docker ps
+
+
+# browser localhost:8080
+# check that it identifies itself as (A)
+
+
+# now change volumes/proxy-node/caddy/Caddyfile
+#
+#24:      reverse_proxy http://172.28.5.2:5678 {
+# to
+#24:      reverse_proxy http://172.28.5.2:5678 http://172.28.5.3:5678 {
+
+docker-compose restart proxy-node
+
+# browser localhost:8080
+# check that it identifies itself as (A) or possibly (B)
+# if you keep pressing refresh it will change
+
+
+docker-compose down
+

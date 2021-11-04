@@ -1,0 +1,23 @@
+
+
+docker network create --driver=bridge --subnet=172.28.5.0/24 --ip-range=172.28.5.0/24 --gateway=172.28.5.254 mynet
+
+
+docker run -d -p 5678:5678 --network=mynet --ip="172.28.5.2" hashicorp/http-echo -text="hello world A - Publish local port 5678"
+docker run -d -p 8888:5678 --network=mynet --ip="172.28.5.3" hashicorp/http-echo -text="hello world B - Redirect to public 8888"
+docker run -d --expose 5678 --network=mynet --ip="172.28.5.4" hashicorp/http-echo -text="hello world C - Exposed port 5678 only"
+
+
+docker ps
+
+
+# browser (A) localhost:5678
+# browser (B) localhost:8888
+
+
+# Someone else's browser (A) <public ip>:5678
+# Someone else's browser (B) <public ip>:8888
+
+
+docker kill <container id>
+docker network rm mynet

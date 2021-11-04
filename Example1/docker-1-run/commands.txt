@@ -1,0 +1,20 @@
+
+
+
+docker pull hello-world
+
+docker images
+
+docker run hello-world
+
+
+docker pull hashicorp/http-echo:latest
+
+docker run -p 5678:5678 hashicorp/http-echo -text="hello world"
+
+# browser localhost:5678
+
+# Someone else browse <public ip>:5678
+
+# Ctrl+C
+
