@@ -8,7 +8,7 @@
 
 - Running use command prompt. Windows key + R, cmd opens the command prompt
 
-- Run in command line –>  `docker  run hello-world`
+- Run in command line –>  `docker run hello-world`
 
 <br>
 
