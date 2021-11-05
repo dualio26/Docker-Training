@@ -15,6 +15,7 @@
 ## Session info:
 
 - Download the example files in this directory of the Repo
+- Code that inclues `##:` are refering to the line number it resides on. Do not copy this into the code.
 
 <br>
 
