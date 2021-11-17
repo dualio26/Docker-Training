@@ -70,6 +70,7 @@
    2. `docker docker run -d -p 8765:5678 hashicorp/http-echo -text="hello world"`<br><br>docker ps<br><br><img src="../Images/Picture33.png">
 
    3. `docker docker run -d -p 8888:5678 hashicorp/http-echo -text="hello world"`<br><br><img src="../Images/Picture31.png">
+
 </details>
 <br>
 
@@ -95,6 +96,7 @@
    4. `docker run -d --expose 5678 --network=mynet --ip="172.28.5.4" hashicorp/http-echo -text="hello world C - Exposed port 5678 only”`<br><br>`docker ps`<br><br><img src="../Images/Picture36.png"><br><br>
 
    5. Exposed port accessed through external IP address<br><br><img src="../Images/Picture34.png">
+
 </details>
 <br>
 
@@ -121,6 +123,7 @@ Use your desired browser and enter [`localhost:8888`](https://localhost:8888) in
    5. `docker run -d -p 5678:5678 --network=mynet --ip="172.28.5.2" hashicorp/http-echo -text="hello world A - Publish local port 5678“`<br><br><br>`docker run -d -p 8888:5678 --network=mynet --ip="172.28.5.3" hashicorp/http-echo -text="hello world B - Redirect to public 8888“`<br><br><br>`docker run -d --expose 5678 --network=mynet --ip="172.28.5.4" hashicorp/http-echo -text="hello world C - Exposed port 5678 only”`<br><br>`docker ps`<br><br><img src="../Images/Picture36.png"><br><br>
 
 2. Output<br><br><img src="../Images/Picture37.png">
+
 </details>
 <br>
 
@@ -275,6 +278,7 @@ Use your desired browser and enter [`localhost:8888`](https://localhost:8888) in
     - Shiny Proxy
     - Hello World
     - Http Echo
+
 </details>
 <br>
 
@@ -290,6 +294,7 @@ Use your desired browser and enter [`localhost:8888`](https://localhost:8888) in
     - Liferay
     - Shiny Proxy
       - Rimages
+
 </details>
 <br>
 
