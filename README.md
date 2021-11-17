@@ -6,8 +6,6 @@ This will repo go over the instructions and examples for the Docker Course.
 
 This course goes over "3 days" focusing on buidling the users skill to be able to use docker for the current projects intended purpose. <br><br>
 
-<br><br>
-
 | Title | Link | Details | Example Files |
 | --------------- | ---------- | ------- | --------------- |
 | How to install docker | [**Install Docker**](InstallDocker.md) |This goes through setting yourself up to start working with docker on your system | [**Install Docker**](InstallDocker.md) |
